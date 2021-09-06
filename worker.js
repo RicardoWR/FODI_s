@@ -13,7 +13,7 @@ async function handleRequest(request) {
   if (queryString) querySplited = queryString.split("=");
   if (querySplited && querySplited[0] === "file") {
     const file = querySplited[1];
-    const fileName = file.split("/").pop();
+    const fileName = file.split("/").pop(); //文件位置，默认根目录
     if (fileName === PASSWD_FILENAME)
       return Response.redirect(
         "https://www.baidu.com/s?wd=%E6%80%8E%E6%A0%B7%E7%9B%97%E5%8F%96%E5%AF%86%E7%A0%81",
